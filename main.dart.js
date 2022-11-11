@@ -36434,7 +36434,7 @@ c3(){this.dO()
 this.cX()
 this.n7()}}
 A.Ej.prototype={
-Y(a){return new A.uZ(B.CD,"Flutter Demo",A.ahN(null,B.fL,null),null)}}
+Y(a){return new A.uZ(B.CD,"App 2 pack",A.ahN(null,B.fL,null),null)}}
 A.dQ.prototype={
 gU(a){return new A.Hc(this.a,0,0)},
 gH(a){var s=this.a,r=s.length
