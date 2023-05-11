@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage>
                           ),
                           const SizedBox(width: 8),
                           GradientText(
-                            'Drop us an email',
+                            'Send us an email',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: min(buttonWidth * 0.084, 18.0),
