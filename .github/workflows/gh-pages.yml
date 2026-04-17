@@ -3,12 +3,25 @@ name: Gh-Pages
 on:
   push:
     branches: [ master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2 # Only works with v2
+      - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
-      - uses: bluefireteam/flutter-gh-pages@v8
+        with:
+          flutter-version: '3.41.7'
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter build web --release --base-href /
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/web
+          cname: app2pack.dev
