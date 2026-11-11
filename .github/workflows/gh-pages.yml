@@ -9,19 +9,12 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.41.7'
-          channel: stable
-          cache: true
-      - run: flutter pub get
-      - run: flutter build web --release --base-href /
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web
+          publish_dir: ./site
           cname: app2pack.dev
