@@ -1,16 +1,11 @@
 # app2pack_landing
 
-A new Flutter project.
+Static landing page for [app2pack.dev](https://app2pack.dev).
 
-## Getting Started
+Everything lives in `site/` — plain HTML, no build step. Pushes to `master` deploy it to GitHub Pages.
 
-This project is a starting point for a Flutter application.
+Preview locally:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+python3 -m http.server -d site
+```
